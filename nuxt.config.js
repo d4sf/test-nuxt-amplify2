@@ -18,6 +18,11 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  // Global middlewares
+  router: {
+    // middleware: ["test"],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -31,7 +36,10 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // Docs: https://axios.nuxtjs.org/usage
+    "@nuxtjs/axios",
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
