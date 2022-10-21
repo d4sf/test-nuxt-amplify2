@@ -11,7 +11,7 @@
 // import LogRocket from "logrocket";
 // LogRocket.init("vxnps8/test");
 
-import 'asdaas' from asdas;
+// import 'asdaas' from asdas;
 
 export default {
   name: "IndexPage",
@@ -47,8 +47,7 @@ export default {
       console.log(this.socket.id);
     });
 
-    console.log(a);
-    throw new Error("trhowed");
+    rtes.map((item) => item);
   },
 };
 </script>
