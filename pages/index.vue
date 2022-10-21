@@ -46,6 +46,7 @@ export default {
     });
 
     console.log(a);
+    throw new Error("trhowed");
   },
 };
 </script>
