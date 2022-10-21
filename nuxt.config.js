@@ -42,7 +42,9 @@ export default {
     // Docs: https://nuxt-socket-io.netlify.app/installation
     "nuxt-socket-io",
     // Docs: https://sentry.nuxtjs.org/guide/usage
-    "@nuxtjs/sentry",
+    // "@nuxtjs/sentry",
+    // Docs: https://github.com/nuxt-community/nuxt-logrocket
+    "nuxt-logrocket",
   ],
 
   io: {
@@ -64,15 +66,21 @@ export default {
     },
   },
 
-  sentry: {
-    dsn: "https://481a5ebf85094cd0b30685d62b679560@o4504022216540160.ingest.sentry.io/4504022356328448",
-    debug: true,
-
-    // Set tracesSampleRate to 1.0 to capture 100%
-    // of transactions for performance monitoring.
-    // We recommend adjusting this value in production
-    tracesSampleRate: 1.0,
+  logRocket: {
+    // configure LogRocket
+    logRocketId: "vxnps8/test",
+    devModeAllowed: true,
   },
+
+  // sentry: {
+  //   dsn: "https://481a5ebf85094cd0b30685d62b679560@o4504022216540160.ingest.sentry.io/4504022356328448",
+  //   debug: true,
+
+  //   // Set tracesSampleRate to 1.0 to capture 100%
+  //   // of transactions for performance monitoring.
+  //   // We recommend adjusting this value in production
+  //   tracesSampleRate: 1.0,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

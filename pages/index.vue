@@ -8,8 +8,25 @@
 </template>
 
 <script>
+// import LogRocket from "logrocket";
+// LogRocket.init("vxnps8/test");
+
 export default {
   name: "IndexPage",
+  // head: {
+  //   link: [
+  //     {
+  //       rel: "stylesheet",
+  //       href: "https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.7.8/dist/annotorious.min.css",
+  //     },
+  //   ],
+  //   script: [
+  //     {
+  //       src: "https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.7.8/dist/annotorious.min.js",
+  //       type: "module",
+  //     },
+  //   ],
+  // },
   data() {
     return {
       socket: undefined,
