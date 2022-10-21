@@ -47,7 +47,21 @@ export default {
       console.log(this.socket.id);
     });
 
-    rtes.map((item) => item);
+    try {
+      rtes.map((item) => item);
+    } catch (err) {
+      console.log("estoy por aca");
+      this.$logRocket.captureException(err, {
+        tags: {
+          // additional data to be grouped as "tags"
+          subscription: "Pro",
+        },
+        extra: {
+          // additional arbitrary data associated with the event
+          pageName: "ProfileView",
+        },
+      });
+    }
   },
 };
 </script>
