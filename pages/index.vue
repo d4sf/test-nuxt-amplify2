@@ -11,6 +11,8 @@
 // import LogRocket from "logrocket";
 // LogRocket.init("vxnps8/test");
 
+import 'asdaas' from asdas;
+
 export default {
   name: "IndexPage",
   // head: {
