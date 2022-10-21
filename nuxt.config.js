@@ -39,7 +39,40 @@ export default {
   modules: [
     // Docs: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    // Docs: https://nuxt-socket-io.netlify.app/installation
+    "nuxt-socket-io",
+    // Docs: https://sentry.nuxtjs.org/guide/usage
+    "@nuxtjs/sentry",
   ],
+
+  io: {
+    sockets: [
+      {
+        name: "home",
+        url: "http://localhost:4000",
+        default: true,
+        vuex: {
+          connection: "socket/SET_CONNECTION_ID",
+        },
+        namespaces: {},
+      },
+    ],
+    server: {
+      cors: {
+        origin: ["http://localhost:3000"],
+      },
+    },
+  },
+
+  sentry: {
+    dsn: "https://481a5ebf85094cd0b30685d62b679560@o4504022216540160.ingest.sentry.io/4504022356328448",
+    debug: true,
+
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production
+    tracesSampleRate: 1.0,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
